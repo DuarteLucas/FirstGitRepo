@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using LoginWithAuthenticationTest.Models;
 
+
 namespace LoginWithAuthenticationTest.Controllers
 {
     [Authorize]
@@ -152,11 +153,16 @@ namespace LoginWithAuthenticationTest.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    Company NewCompanyUser = new Company();
+                    NewCompanyUser.CompanyGUID = user.Id;
                     
+                    
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Enviar um email com este link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
