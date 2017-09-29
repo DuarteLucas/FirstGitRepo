@@ -29,5 +29,9 @@ namespace LoginWithAuthenticationTest.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<LoginWithAuthenticationTest.Models.Programador> Programadors { get; set; }
+
+        //s public System.Data.Entity.DbSet<LoginWithAuthenticationTest.Models.Programador> Programadors { get; set; }
     }
 }
