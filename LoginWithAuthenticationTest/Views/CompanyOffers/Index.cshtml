@@ -23,9 +23,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Experience)
         </th>
-        @*<th>
+        <th>
             @Html.DisplayNameFor(model => model.Company.CompanyGUID)
-        </th>*@
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Language.Name)
         </th>
@@ -46,17 +46,17 @@
         <td>
             @Html.DisplayFor(modelItem => item.Experience)
         </td>
-        @*<td>
+        <td>
             @Html.DisplayFor(modelItem => item.Company.CompanyGUID)
-        </td>*@
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Language.Name)
         </td>
-        @*<td>
+        <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.CompanyOfferID }) |
             @Html.ActionLink("Details", "Details", new { id=item.CompanyOfferID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.CompanyOfferID })
-        </td>*@
+        </td>
     </tr>
 }
 
