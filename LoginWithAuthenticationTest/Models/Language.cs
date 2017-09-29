@@ -13,33 +13,23 @@ namespace LoginWithAuthenticationTest.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
-    public partial class Company
+    public partial class Language
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Company()
+        public Language()
         {
             this.CompanyOffer = new HashSet<CompanyOffer>();
+            this.Programador = new HashSet<Programador>();
         }
-        public string CompanyGUID { get; set; }
-        public int CompanyID { get; set; }
-        [Display(Name="Nome da entidade")]
+        public int LanguageID { get; set; }
+        [Display(Name = "Linguagem")]
         public string Name { get; set; }
-        [Display(Name = "Correio electronico")]
-        public string Email { get; set; }
-        [Display(Name = "Senha")]
-        public string Password { get; set; }
-        [Display(Name = "Contacto telefonico")]
-        public string PhoneNumber { get; set; }
-        [Display(Name = "Localidade")]
-        public string Location { get; set; }
-        [Display(Name = "Area de negocio")]
-        public string CoreBusiness { get; set; }
-        [Display(Name = "Logotipo")]
+        [Display(Name = "Logotipo da linguagem")]
         public string Image { get; set; }
-        [Display(Name = "Pagina oficial")]
-        public string Link { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CompanyOffer> CompanyOffer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Programador> Programador { get; set; }
     }
 }

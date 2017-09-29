@@ -158,8 +158,8 @@ namespace LoginWithAuthenticationTest.Controllers
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    Company NewCompanyUser = new Company();
-                    NewCompanyUser.CompanyGUID = user.Id;
+                    //Company NewCompanyUser = new Company();
+                    //NewCompanyUser.CompanyGUID = user.Id;
                     
                     
 
