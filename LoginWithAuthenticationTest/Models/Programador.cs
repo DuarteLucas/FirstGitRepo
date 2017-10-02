@@ -22,37 +22,28 @@ namespace LoginWithAuthenticationTest.Models
         }
     
         public string ProgramadorGUID { get; set; }
-
         public int ProgramadorID { get; set; }
-        [Display(Name = "Primeiro nome")]
+        [Display(Name = "First name")]
         public string FirstName { get; set; }
-        [Display(Name = "Apelido")]
+        [Display(Name = "Last name")]
         public string LastName { get; set; }
-        [Display(Name = "Correio eletronico")]
         public string Email { get; set; }
-        [Display(Name = "Senha")]
         public string Password { get; set; }
-        [Display(Name = "Idade")]
         public Nullable<int> Age { get; set; }
-        [Display(Name = "Contacto telefonico")]
+        [Display(Name = "Phone number")]
         public string PhoneNumber { get; set; }
-        [Display(Name = "Localidade")]
         public string Location { get; set; }
-        [Display(Name = "Posicao atual")]
         public string Category { get; set; }
-        [Display(Name = "Descricao")]
         public string Description { get; set; }
-        [Display(Name = "Preco por hora")]
+        [Display(Name = "Price per hour")]
         public Nullable<double> Price_hour { get; set; }
-        [Display(Name = "Fotografia de perfil")]
+        [Display(Name = "Photo")]
         public string Foto { get; set; }
-        [Display(Name = "Link para o GitHub")]
+        [Display(Name = "Link for GitHub")]
         public string LinkGithub { get; set; }
-        [Display(Name = "Link para o Linkedin")]
+        [Display(Name = "Link for Linkedin")]
         public string LinkLinkedin { get; set; }
-        [Display(Name = "Certificados")]
         public string Certificates { get; set; }
-        [Display(Name = "Perfil privado?")]
         public Nullable<bool> Privacy { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

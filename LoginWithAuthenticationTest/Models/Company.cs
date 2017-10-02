@@ -20,23 +20,21 @@ namespace LoginWithAuthenticationTest.Models
         {
             this.CompanyOffer = new HashSet<CompanyOffer>();
         }
+    
         public string CompanyGUID { get; set; }
         public int CompanyID { get; set; }
-        [Display(Name="Nome da entidade")]
+        [Display(Name="Company name")]
         public string Name { get; set; }
-        [Display(Name = "Correio electronico")]
         public string Email { get; set; }
-        [Display(Name = "Senha")]
         public string Password { get; set; }
-        [Display(Name = "Contacto telefonico")]
+        [Display(Name = "Phone number")]
         public string PhoneNumber { get; set; }
-        [Display(Name = "Localidade")]
         public string Location { get; set; }
-        [Display(Name = "Area de negocio")]
+        [Display(Name = "Core Business")]
         public string CoreBusiness { get; set; }
-        [Display(Name = "Logotipo")]
+        [Display(Name = "Company's logo")]
         public string Image { get; set; }
-        [Display(Name = "Pagina oficial")]
+        [Display(Name = "Company's website")]
         public string Link { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
