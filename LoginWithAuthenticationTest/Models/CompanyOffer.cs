@@ -11,26 +11,18 @@ namespace LoginWithAuthenticationTest.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class CompanyOffer
     {
-
         public int CompanyOfferID { get; set; }
         public int CompanyID { get; set; }
         public int LanguageID { get; set; }
-        [Display(Name = "Remuneracao por hora")]
         public Nullable<decimal> Price { get; set; }
-        [Display(Name = "Idade")]
-        public Nullable<int> Age { get; set; }
-        [Display(Name = "Localidade")]
         public string Location { get; set; }
-        [Display(Name = "Experiencia")]
         public Nullable<int> Experience { get; set; }
-
-        public Company Company { get; set; }
-        [Required]
-        [Display(Name = "Linguagem")]
-        public Language Language { get; set; }
+        public string Description { get; set; }
+    
+        public virtual Company Company { get; set; }
+        public virtual Language Language { get; set; }
     }
 }

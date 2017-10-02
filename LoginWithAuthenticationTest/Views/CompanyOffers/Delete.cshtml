@@ -20,14 +20,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Age)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Age)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Location)
         </dt>
 
@@ -44,12 +36,20 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        @*<dt>
             @Html.DisplayNameFor(model => model.Company.CompanyGUID)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Company.CompanyGUID)
-        </dd>
+        </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.Language.Name)

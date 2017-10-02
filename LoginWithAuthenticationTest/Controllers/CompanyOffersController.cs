@@ -49,7 +49,7 @@ namespace LoginWithAuthenticationTest.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CompanyOfferID,CompanyID,LanguageID,Price,Age,Location,Experience")] CompanyOffer companyOffer)
+        public ActionResult Create([Bind(Include = "CompanyOfferID,CompanyID,LanguageID,Price,Location,Experience,Description")] CompanyOffer companyOffer)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace LoginWithAuthenticationTest.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CompanyOfferID,CompanyID,LanguageID,Price,Age,Location,Experience")] CompanyOffer companyOffer)
+        public ActionResult Edit([Bind(Include = "CompanyOfferID,CompanyID,LanguageID,Price,Location,Experience,Description")] CompanyOffer companyOffer)
         {
             if (ModelState.IsValid)
             {

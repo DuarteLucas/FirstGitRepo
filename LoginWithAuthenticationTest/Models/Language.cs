@@ -21,10 +21,10 @@ namespace LoginWithAuthenticationTest.Models
             this.CompanyOffer = new HashSet<CompanyOffer>();
             this.Programador = new HashSet<Programador>();
         }
+    
         public int LanguageID { get; set; }
-        [Display(Name = "Linguagem")]
+        [Display(Name="Language")]
         public string Name { get; set; }
-        [Display(Name = "Logotipo da linguagem")]
         public string Image { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
