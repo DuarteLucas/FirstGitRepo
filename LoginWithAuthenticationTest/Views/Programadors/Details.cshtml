@@ -6,141 +6,106 @@
 
 <h2>Details</h2>
 
-<div>
-    <h4>Programador</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        @*<dt>
-            @Html.DisplayNameFor(model => model.ProgramadorGUID)
-        </dt>
+<div class="container-fluid">
 
-        <dd>
-            @Html.DisplayFor(model => model.ProgramadorGUID)
-        </dd>*@
+    <div class="col-sm-12">
+        <div class="panel panel-default user-info">
+            <div class="panel-body clearfix">
+                <div class="pull-left profile-avatar">
+                    <div class="thumbnail">
+                        @Html.DisplayFor(model => model.Foto)
+                        <img src="http://placehold.it/125x125&text=x">
+                    </div>
+                </div>
+                <div class="pull-left profile-data">
+                    <div class="name">
+                        <h2>@Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h2>
+                    </div>
+                    <div class="contact-data">
+                        <ul class="list-unstyled">
+                            <li><strong>@Html.DisplayNameFor(model => model.Category):      </strong>@Html.DisplayFor(model => model.Category)</li>
+                            <li><strong>@Html.DisplayNameFor(model => model.Email):         </strong>@Html.DisplayFor(model => model.Email)</li>
+                            <li><strong>@Html.DisplayNameFor(model => model.PhoneNumber):   </strong>@Html.DisplayFor(model => model.PhoneNumber)</li>
+                            <li><strong>@Html.DisplayNameFor(model => model.Age):           </strong>@Html.DisplayFor(model => model.Age) anos</li>
+                            <li><strong>@Html.DisplayNameFor(model => model.Location):      </strong>@Html.DisplayFor(model => model.Location) </li>
+                            <li><strong>@Html.DisplayNameFor(model => model.Price_hour):    </strong>@Html.DisplayFor(model => model.Price_hour) EUR/hr</li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="button">GUARDAR NOS FAVORITOS</button>
+                <button class="button button2">CONTACTAR CANDIDATO</button>
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
+        <div class="panel panel-default user-notes">
+            <div class="panel-heading">
+                <h3 class="panel-title">@Html.DisplayNameFor(model => model.Description)
+</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>@Html.DisplayFor(model => model.Description)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel panel-default user-files">
+            <div class="panel-heading">
+                <h3 class="panel-title">@Html.DisplayNameFor(model => model.Certificates)</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="list-inline">
+                    <li>
+                        <a class="thumbnail" href="/" title="this_filename.jpg">
+                            <i class="fa fa-3x fa-file-o" aria-hidden="true"></i>
+                            <small class="file-name">@Html.DisplayFor(model => model.Certificates)</small>
+                        </a>
+                    </li>
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
+                </ul>
+            </div>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
+        <div class="panel panel-default user-notes">
+            <div class="panel-heading">
+                <h3 class="panel-title">Links</h3>
+            </div>
+            <div class="social__container">
 
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
+                <!-- social__item linkedin -->
+                <div class="social__item">
+                    <a target="_blank" href="https://www.linkedin.com/pub/steven-roberts/7a/707/409" class="social__icon--linkedin"><i class="icon--linkedin"></i></a>
+                </div>
+                <!-- /social__item linkedin -->
+                <!-- social__item google+ -->
+                <div class="social__item">
+                    <a target="_blank" href="https://plus.google.com/u/0/+StevenRoberts-mbh/posts" class="social__icon--googleplus"><i class="icon--googleplus"></i></a>
+                </div>
+                <!-- /social__item google+ -->
+                <!-- social__item dropbox -->
+                <div class="social__item">
+                    <a target="_blank" href="https://dropbox.com" class="social__icon--dropbox"><i class="icon--dropbox"></i></a>
+                </div>
+                <!-- /social__item dropbox -->
+                <!-- social__item skype -->
+                <div class="social__item">
+                    <a target="_blank" href="http://skype.com" class="social__icon--skype"><i class="icon--skype"></i></a>
+                </div>
+                <!-- /social__item skype -->
+                <!-- social__item github -->
+                <div class="social__item">
+                    <a target="_blank" href="https://github.com" class="social__icon--github"><i class="icon--github"></i></a>
+                </div>
+                <!-- /social__item github -->
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        @*<dt>
-            @Html.DisplayNameFor(model => model.Password)
-        </dt>*@
-
-        <dd>
-            @Html.DisplayFor(model => model.Password)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Age)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Age)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Location)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Category)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Category)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Price_hour)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Price_hour)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Foto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Foto)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LinkGithub)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LinkGithub)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LinkLinkedin)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LinkLinkedin)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Certificates)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Certificates)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Privacy)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Privacy)
-        </dd>
-
-    </dl>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+
+
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ProgramadorID }) |
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ProgramadorID }) |*@
     @Html.ActionLink("Back to List", "Index")
 </p>
