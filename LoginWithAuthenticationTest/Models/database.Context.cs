@@ -13,10 +13,10 @@ namespace LoginWithAuthenticationTest.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class jobEntities : DbContext
+    public partial class jobEntities1 : DbContext
     {
-        public jobEntities()
-            : base("name=jobEntities")
+        public jobEntities1()
+            : base("name=jobEntities1")
         {
         }
     
@@ -25,11 +25,6 @@ namespace LoginWithAuthenticationTest.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
-        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
-        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
-        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
-        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<Company> Company { get; set; }
         public virtual DbSet<CompanyOffer> CompanyOffer { get; set; }
         public virtual DbSet<Language> Language { get; set; }

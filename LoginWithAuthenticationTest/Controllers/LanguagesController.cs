@@ -12,7 +12,7 @@ namespace LoginWithAuthenticationTest.Controllers
 {
     public class LanguagesController : Controller
     {
-        private jobEntities db = new jobEntities();
+        private jobEntities1 db = new jobEntities1();
 
         // GET: Languages
         public ActionResult Index()

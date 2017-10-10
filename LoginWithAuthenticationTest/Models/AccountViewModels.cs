@@ -79,6 +79,8 @@ namespace LoginWithAuthenticationTest.Models
         [Display(Name = "Confirmar Senha")]
         [Compare("Password", ErrorMessage = "A senha e a senha de confirmação não correspondem.")]
         public string ConfirmPassword { get; set; }
+
+        public string Name { get; set; }
     }
 
     public class ResetPasswordViewModel

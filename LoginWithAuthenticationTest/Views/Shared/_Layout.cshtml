@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
@@ -11,38 +11,43 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div>
+        <div class="layout">
+            <nav>
+                <div>
 
-                @Html.ActionLink("Programmer APP", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                <img id="logo" src="https://assets8.domestika.org/job-covers/000/047/358/47358-original.png?1487366086" alt="Site Logo" />
+                    @Html.ActionLink("CODE PLACE", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    @*<img id="logo" src="https://assets8.domestika.org/job-covers/000/047/358/47358-original.png?1487366086" alt="Site Logo" />*@
 
-                <ul class="nav navbar-nav">
+                    <ul>
 
-                   @* <li>@Html.ActionLink("Home", "Index", "Home")</li>*@
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                <form>
-                    @Html.Partial("_LoginPartial")
-                </form>
+                        @* <li>@Html.ActionLink("Home", "Index", "Home")</li>*@
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        @*<li>@Html.ActionLink("Role", "Index", "Role")</li>*@
+                    </ul>
+                    <form>
+                        <div class="login">
+                            @Html.Partial("_LoginPartial")
+                        </div>
+                    </form>
 
-            </div>
-        </nav>
+                </div>
+            </nav>
+        </div>
 
     </header>
 
-            <div class="container body-content">
-                @RenderBody()
-                <hr />
+    @RenderBody()
 
-                @*<footer>
-                    <p>&copy; @DateTime.Now.Year - Meu Aplicativo ASP.NET</p>
-                </footer>*@
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+        <footer>
+            <div class="layout navbar-fixed-bottom">
+                <p>&copy; @DateTime.Now.Year - CodePlace Market</p>
             </div>
+        </footer>
 
-            @Scripts.Render("~/bundles/jquery")
-            @Scripts.Render("~/bundles/bootstrap")
-            @RenderSection("scripts", required: false)
 </body>
 </html>

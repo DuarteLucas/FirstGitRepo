@@ -1,44 +1,33 @@
 ﻿@{
     ViewBag.Title = "Home Page";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
-    @*@Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")*@
 
-</head>
-<body>
-    
+<div class="homepage">
+
     <section class="body">
-        <h1> <b>Bem-Vindo! Escolhe uma opção para começar...</b></h1>
+        <h1> <b>Welcome to Code Place</b></h1>
     </section>
     <div class="container">
         <div class="esquerda col-md-6">
-        <figure class="snip0069 green">
-            <div class="image"><img src="http://benefits-assure.com/wp-content/uploads/2015/07/hr-admin.png" alt="sample47" id="centro" /></div>
-         <figcaption>
-            <h3>Procurar trabalhador</h3>
-            <p>Pesquise os CV disponíveis e encontre os profissionais com as competências que procura.</p>
-        </figcaption><a href="#"></a>       
-        </figure>
+            <figure class="snip0069 green">
+
+                    <div class="image"><img src="http://benefits-assure.com/wp-content/uploads/2015/07/hr-admin.png" alt="sample47" id="centro" /></div>
+                <figcaption>
+                    <h3>Look for Programmers</h3>
+                    @*<p>Pesquise os CV disponíveis e encontre os profissionais com as competências que procura.</p>*@
+                </figcaption><a href="/SearchProgrammer/SearchProgrammer"></a>
+</figure>
         </div>
 
         <div class="direita col-md-6">
             <figure class="snip0069 blue">
-            <div class="image"><img src="http://icons.iconarchive.com/icons/harwen/pleasant/256/Search-icon.png" alt="sample47" id="centro" /></div>
+                <div class="image"><img src="http://icons.iconarchive.com/icons/harwen/pleasant/256/Search-icon.png" alt="sample47" id="centro" /></div>
                 <figcaption>
-                    <h3>Procurar empregador</h3>
-                    <p>Procure a oferta de emprego mais adequada ao seu perfil.</p>
-                </figcaption><a href="#"></a>
+                    <h3>Look for offers</h3>
+                    @*<p>Procure a oferta de emprego mais adequada ao seu perfil.</p>*@
+                </figcaption><a href="/SearchOffers/SearchOffers"></a>
             </figure>
         </div>
     </div>
-</body>
-</html>
+</div>

@@ -12,7 +12,7 @@ namespace LoginWithAuthenticationTest.Controllers
 {
     public class ProgramadorsController : Controller
     {
-        private jobEntities db = new jobEntities();
+        private jobEntities1 db = new jobEntities1();
 
         // GET: Programadors
         public ActionResult Index()
@@ -46,7 +46,7 @@ namespace LoginWithAuthenticationTest.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProgramadorGUID,ProgramadorID,FirstName,LastName,Email,Password,Age,PhoneNumber,Location,Category,Description,Price_hour,Foto,LinkGithub,LinkLinkedin,Certificates,Privacy")] Programador programador)
+        public ActionResult Create([Bind(Include = "ProgramadorGUID,ProgramadorID,FirstName,LastName,Email,Password,Age,PhoneNumber,Location,Category,Description,PriceHour,Foto,LinkGithub,LinkLinkedin,Certificates,Privacy")] Programador programador)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace LoginWithAuthenticationTest.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProgramadorGUID,ProgramadorID,FirstName,LastName,Email,Password,Age,PhoneNumber,Location,Category,Description,Price_hour,Foto,LinkGithub,LinkLinkedin,Certificates,Privacy")] Programador programador)
+        public ActionResult Edit([Bind(Include = "ProgramadorGUID,ProgramadorID,FirstName,LastName,Email,Password,Age,PhoneNumber,Location,Category,Description,PriceHour,Foto,LinkGithub,LinkLinkedin,Certificates,Privacy")] Programador programador)
         {
             if (ModelState.IsValid)
             {
