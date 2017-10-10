@@ -1,0 +1,74 @@
+﻿@model IEnumerable<LoginWithAuthenticationTest.Models.CompanyOffer>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+<div class="offerResults">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <table summary="This table shows how to create responsive tables using Datatables' extended functionality" class="table table-bordered table-hover dt-responsive">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Price)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Location)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Experience)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Description)
+                            </th>
+                            @*<th>
+                                @Html.DisplayNameFor(model => model.Company.CompanyGUID)
+                            </th>*@
+                            <th>
+                                @Html.DisplayNameFor(model => model.Language.Name)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Price)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Location)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Experience)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                @*<td>
+                                    @Html.DisplayFor(modelItem => item.Company.CompanyGUID)
+                                </td>*@
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Language.Name)
+                                </td>
+                                @*<td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.CompanyOfferID }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.CompanyOfferID }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.CompanyOfferID })
+                                </td>*@
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

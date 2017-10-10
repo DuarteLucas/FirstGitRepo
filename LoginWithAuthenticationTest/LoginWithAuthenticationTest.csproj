@@ -197,57 +197,46 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LanguagesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OfferResultsController.cs" />
     <Compile Include="Controllers\ProgramadorsController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\SearchOffersController.cs" />
+    <Compile Include="Controllers\SearchProgrammerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AspNetRoles.cs">
-      <DependentUpon>database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AspNetUserClaims.cs">
-      <DependentUpon>database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AspNetUserLogins.cs">
-      <DependentUpon>database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AspNetUsers.cs">
-      <DependentUpon>database.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Company.cs">
-      <DependentUpon>database.tt</DependentUpon>
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CompanyOffer.cs">
-      <DependentUpon>database.tt</DependentUpon>
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\C__MigrationHistory.cs">
-      <DependentUpon>database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\database.Context.cs">
+    <Compile Include="Models\Database.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>database.Context.tt</DependentUpon>
+      <DependentUpon>Database.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\database.cs">
+    <Compile Include="Models\Database.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>database.tt</DependentUpon>
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\database.Designer.cs">
+    <Compile Include="Models\Database.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>database.edmx</DependentUpon>
+      <DependentUpon>Database.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Language.cs">
-      <DependentUpon>database.tt</DependentUpon>
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Programador.cs">
-      <DependentUpon>database.tt</DependentUpon>
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>database.tt</DependentUpon>
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -258,27 +247,27 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\database.Context.tt">
+    <Content Include="Models\Database.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>database.edmx</DependentUpon>
-      <LastGenOutput>database.Context.cs</LastGenOutput>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\database.tt">
+    <Content Include="Models\Database.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>database.edmx</DependentUpon>
-      <LastGenOutput>database.cs</LastGenOutput>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\database.edmx">
+    <EntityDeploy Include="Models\Database.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>database.Designer.cs</LastGenOutput>
+      <LastGenOutput>Database.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\database.edmx.diagram">
-      <DependentUpon>database.edmx</DependentUpon>
+    <Content Include="Models\Database.edmx.diagram">
+      <DependentUpon>Database.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -305,7 +294,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\SearchProgrammer\SearchProgrammer.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -314,7 +303,7 @@
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\RegisterProgrammer.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />
@@ -345,6 +334,10 @@
     <Content Include="Views\CompanyOffers\Details.cshtml" />
     <Content Include="Views\CompanyOffers\Edit.cshtml" />
     <Content Include="Views\CompanyOffers\Index.cshtml" />
+    <Content Include="Views\SearchOffers\SearchOffers.cshtml" />
+    <Content Include="Views\OfferResults\OfferResults.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Role\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -392,8 +385,8 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <PropertyGroup>
-    <PreBuildEvent>tasklist /fi "imagename eq iisexpress.exe" |find ":" &gt; nul
-if errorlevel 1 taskkill /f /im "iisexpress.exe"</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

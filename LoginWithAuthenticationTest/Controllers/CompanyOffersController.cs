@@ -12,7 +12,7 @@ namespace LoginWithAuthenticationTest.Controllers
 {
     public class CompanyOffersController : Controller
     {
-        private jobEntities db = new jobEntities();
+        private jobEntities1 db = new jobEntities1();
 
         // GET: CompanyOffers
         public ActionResult Index()

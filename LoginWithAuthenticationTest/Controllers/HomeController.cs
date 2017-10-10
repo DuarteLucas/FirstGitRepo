@@ -12,7 +12,7 @@ namespace LoginWithAuthenticationTest.Controllers
         {
             return View();
         }
-
+        [Authorize(Roles ="Admin")]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -20,11 +20,10 @@ namespace LoginWithAuthenticationTest.Controllers
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+        //public ActionResult SearchProgrammer()
+        //{
 
-            return View();
-        }
+        //    return View();
+        //}
     }
 }
