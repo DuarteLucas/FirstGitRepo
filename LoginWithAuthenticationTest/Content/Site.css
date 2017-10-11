@@ -1,6 +1,6 @@
-﻿@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+﻿/*@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
 @charset "UTF-8";
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);*/
 
 
 .layout footer {
@@ -258,18 +258,15 @@
     border-bottom: 3px solid #27ae60;
 }
 
-
+/*filipe css*/
 .searchProgrammer {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background-color: black
+    padding: 50px 20px 300px 150px;
+    /*padding-top: 50px;
+    padding-bottom: 20px;*/
+    background-color: white;
+    /*padding-left: 150px;
+    padding-right: 150px;*/
 }
-
-    /* Set padding to keep content from hitting the edges */
-    .searchProgrammer-content {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
 
     /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -285,13 +282,13 @@
         max-width: 280px;
     }
 
-    .searchProgrammer .types img {
-        width: 80px;
-        height: 80px;
+    .searchProgrammer img {
+        width: 100px;
+        height: 100px;
     }
 
     .searchProgrammer.types {
-        margin: 20px;
+        margin: 10px;
     }
 
 
@@ -332,10 +329,9 @@
     }
 
     .searchProgrammer h1 {
+        font-family: Verdana;
         color: black;
     }
-
-
 
 
 
