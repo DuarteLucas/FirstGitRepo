@@ -20,10 +20,12 @@ namespace LoginWithAuthenticationTest.Controllers
             return View();
         }
 
-        //public ActionResult SearchProgrammer()
-        //{
+        public ActionResult Contacts() {
+            return View();
+        }
 
-        //    return View();
-        //}
+        public ActionResult HowItWorks() {
+            return View();
+        }
     }
 }

@@ -214,7 +214,7 @@
 
 .layout #logo {
     width: auto;
-    height: 60px;
+    height: 150px;
     display: inline-block;
 }
 
@@ -226,7 +226,7 @@
 .layout nav ul,
 .layout form {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 22px;
     margin-left: -20px;
 }
 
@@ -257,6 +257,20 @@
 .layout nav li a:active {
     border-bottom: 3px solid #27ae60;
 }
+
+.layout #loginLink {
+    background-color: #4caf50;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 32px;
+}
+
+.layout #registerLink {
+    background-color: #20a2d6;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 32px;
+} 
 
 /*filipe css*/
 .searchProgrammer {
