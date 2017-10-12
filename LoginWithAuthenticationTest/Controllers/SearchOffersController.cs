@@ -9,6 +9,7 @@ namespace LoginWithAuthenticationTest.Controllers
     public class SearchOffersController : Controller
     {
         // GET: SearchOffers
+        [Authorize(Roles = "Admin,Company,Programmer")]
         public ActionResult SearchOffers()
         {
             return View();

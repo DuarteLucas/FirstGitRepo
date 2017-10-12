@@ -1,10 +1,10 @@
 ﻿@model LoginWithAuthenticationTest.Models.Programador
 
 @{
-    ViewBag.Title = "Edit";
+//ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Your profile</h2>
 
 
 @using (Html.BeginForm())
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Programador</h4>
+        @*<h4>Programador</h4>*@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -122,6 +122,11 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Certificates, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Certificates, "", new { @class = "text-danger" })
+                <label class="input-group-btn">
+                    <span class="btn btn-default">
+                        Browse&hellip; <input type="file" style="display: none;" multiple>
+                    </span>
+                </label>
             </div>
         </div>
 
