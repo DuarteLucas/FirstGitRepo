@@ -200,6 +200,7 @@
     <Compile Include="Controllers\OfferResultsController.cs" />
     <Compile Include="Controllers\ProgramadorsController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\SearchOffersController.cs" />
     <Compile Include="Controllers\SearchProgrammerController.cs" />
     <Compile Include="Global.asax.cs">
@@ -338,10 +339,16 @@
     <Content Include="Views\OfferResults\OfferResults.cshtml" />
     <Content Include="Views\Role\Index.cshtml" />
     <Content Include="Views\Role\Create.cshtml" />
+
     <Content Include="Views\Account\RegisterCompany.cshtml" />
     <Content Include="Views\Programadors\SelectLanguages.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Home\HowItWorks.cshtml" />
     <Content Include="Views\Home\Contacts.cshtml" />
+=======
+    <Content Include="Views\Search\ResultProgrammer.cshtml" />
+
+>>>>>>> 8df5648018d36583d9f866efa89a49785971f65f
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
