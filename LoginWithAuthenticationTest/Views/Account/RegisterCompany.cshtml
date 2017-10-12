@@ -1,14 +1,14 @@
 ﻿@model LoginWithAuthenticationTest.Models.RegisterViewModel
 @{
-    ViewBag.Title = "Registe-se";
+    ViewBag.Title = "Company Registry";
 }
 
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 
 @using (Html.BeginForm("RegisterCompany", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <h4>Crie uma nova conta.</h4>
+    <h4>Create a new <strong>Company</strong> account.</h4>
         <hr />
         @Html.ValidationSummary("", new { @class = "text-danger" })
         <div class="form-group">
