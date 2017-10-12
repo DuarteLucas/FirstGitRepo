@@ -169,7 +169,7 @@ namespace LoginWithAuthenticationTest.Controllers
                 if (result.Succeeded)
                 {
                     //Assign Role to user Here 
-                    await this.UserManager.AddToRoleAsync(user.Id, "Programmer");
+                    await this.UserManager.AddToRoleAsync(user.Id, model.Name);
                     //Ends Here
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     //Company NewCompanyUser = new Company();
@@ -183,7 +183,7 @@ namespace LoginWithAuthenticationTest.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirmar sua conta", "Confirme sua conta clicando <a href=\"" + callbackUrl + "\">aqui</a>");
 
-                    return RedirectToAction("Edit","Programadors", new { id=userProgramador.ProgramadorID });
+                    return RedirectToAction("Edit","Programadors"/*, new { id=userProgramador.ProgramadorID}*/);
                 }
                 AddErrors(result);
             }
@@ -224,7 +224,7 @@ namespace LoginWithAuthenticationTest.Controllers
                 if (result.Succeeded)
                 {
                     //Assign Role to user Here 
-                    await this.UserManager.AddToRoleAsync(user.Id, "Company");
+                    await this.UserManager.AddToRoleAsync(user.Id, model.Name);
                     //Ends Here
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                     //Company NewCompanyUser = new Company();

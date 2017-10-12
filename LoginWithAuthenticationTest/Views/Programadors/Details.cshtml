@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
 }
 <div class="profileuser">
-    <h2>Programmer Details</h2>
+    <h2>Details</h2>
 
     <div class="container-fluid">
 
@@ -14,7 +14,7 @@
                     <div class="pull-left profile-avatar">
                         <div class="thumbnail">
                             @Html.DisplayFor(model => model.Foto)
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhqRg6R0RflVTXFVR6Ow1RwdkZfohGCieG4NAyfYCWoGh1dcKquQ">
+                            <img src="http://placehold.it/125x125&text=x">
                         </div>
                     </div>
                     <div class="pull-left profile-data">
@@ -32,7 +32,7 @@
                             </ul>
                         </div>
                     </div>
-                    <button class="button">GUARDAR NOS FAVORITOS</button>
+                    @*<button class="button">GUARDAR NOS FAVORITOS</button>*@
                     <button class="button button2">CONTACTAR CANDIDATO</button>
                 </div>
             </div>
@@ -108,7 +108,7 @@
 
 <p>
     @*@Html.ActionLink("Edit", "Edit", new { id = Model.ProgramadorID }) |*@
-    @*@Html.ActionLink("Back to List", "Index")*@
+    @Html.ActionLink("Back to List", "Index")
 </p>
 
     </div>

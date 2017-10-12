@@ -41,11 +41,6 @@ namespace LoginWithAuthenticationTest.Controllers
             return View();
         }
 
-        public ActionResult SelectLanguages()
-        {
-            return View();
-        }
-
         // POST: Programadors/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -89,7 +84,7 @@ namespace LoginWithAuthenticationTest.Controllers
             {
                 db.Entry(programador).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("SelectLanguages");
+                return RedirectToAction("Index");
             }
             return View(programador);
         }

@@ -3,122 +3,165 @@
     ViewBag.Title = "SearchOffers";
 }
 <div class="searchProgrammer">
-    <form id="pesquisa">
-        <div class="language">
-            <h1>Escolha a linguagem pretendida</h1>
 
-            <label class="types">
-                <input type="radio" name="a">
-                <img src="http://www.softaculous.com/blog/wp-content/uploads/2013/04/php-logo.jpeg" alt="PHP">
-            </label>
-            <label class="types">
-                <input type="radio" name="a">
-                <img src="http://www.freeiconspng.com/uploads/c-logo-icon-18.png" alt="C#">
-            </label>
-            <label class="types">
-                <input type="radio" name="a">
-                <img src="http://www.fotosdigitalesgratis.com/noticias/fotos/Java-Logo.jpg" alt="java">
-            </label>
-            <label class="types">
-                <input type="radio" name="a">
-                <img src="http://www.unixstickers.com/image/cache/data/JavaScript.sh-600x600.png" alt="javascript">
-            </label>
-            <label class="types">
-                <input type="radio" name="a">
-                <img src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" alt="HTML5">
-            </label>
-            <label class="types">
-                <input type="radio" name="a">
-                <img src="http://www.codingdojo.com/blog/wp-content/uploads/css.jpg" alt="CSS">
-            </label>
-            <br />
-            <br />
+    <h2>SearchOffers</h2>
 
-            <label class="types">
-                <input type="radio" name="a">
-                <img src="http://www.macnotes.de/images/ruby-on-rails.png" alt="Rails">
-            </label>
-            <label class="types">
-                <input type="radio" name="a">
-                <img src="https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png" alt="c++">
-            </label>
-            <label class="types">
-                <input type="radio" name="a">
-                <img src="http://logodatabases.com/wp-content/uploads/2012/03/mysql.jpg" alt="mysql">
-            </label>
-            <label class="types">
-                <input type="radio" name="a">
-                <img src="https://hackerlists.com/wp-content/uploads/2016/08/Swift-Programming-Language-Logo.jpeg" alt="sqlserver">
-            </label>
-            <label class="types">
-                <input type="radio" name="a">
-                <img src="http://www.mcclellandlegge.com/img/scala-logo.jpg" alt="Scala">
-            </label>
-            <label class="types">
-                <input type="radio" name="a">
-                <img src="https://res.cloudinary.com/teepublic/image/private/s--3dkQ0z9B--/t_Preview/b_rgb:262c3a,c_limit,f_jpg,h_630,q_90,w_630/v1449653778/production/designs/367039_1.jpg" alt="node">
-            </label>
-        </div>
+    <br />
+    <br />
+    <form action="linguagem">
+        <div class="boxed">
 
-        <br />
-        <br />
-        <div class="field">
             <div class="language">
-                <br />
-                <label ng-show="betterField2" class="localidade">
-                    <h1>Escolha a Localidade</h1>
+                <h1>Escolha a linguagem pretendida</h1>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\PHP_logo.png" alt="PHP">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\C_logo.png" alt="C">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\CSHARP_logo.png" alt="csharp">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\CSS3_logo.png" alt="CSS3">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\HTML5_logo.png" alt="HTML5">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\NODE_logo.png" alt="NODE">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\NODE_logo.png" alt="NODE">
                 </label>
                 <br />
-                <select class="localidade" ng-model="betterField2" />
-                <option value="0" disabled>Localidade</option>
-                <option value="1">Lisboa</option>
-                <option value="2">Porto</option>
-                <option value="3">Braga</option>
-                <option value="4">Bragança</option>
-                <option value="5">Castelo Branco</option>
-                <option value="6">Coimbra</option>
-                <option value="7">Évora</option>
-                <option value="8">Faro</option>
-                <option value="9">Guarda</option>
-                <option value="10">Leiria</option>
-                <option value="11">Aveiro</option>
-                <option value="12">Coimbra</option>
-                <option value="13">Portalegre</option>
-                <option value="14">Beja</option>
-                <option value="15">Santarém</option>
-                <option value="16">Setúbal</option>
-                <option value="17">Viana do Castelo</option>
-                <option value="18">Vila Real</option>
-                <option value="19">Viseu</option>
-                </select>
+
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\JAVA_logo.png" alt="JAVA">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\JAVASCRIPT_logo.png" alt="JAVASCRIPT">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\MYSQL_logo.png" alt="MYSQL">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\PYTHON_logo.png" alt="PYTHON">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\RUBY_logo.png" alt="RUBY">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\CSHARP_logo.png" alt="some img">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\Cmais_logo.png" alt="C++">
+                </label>
+                <br />
+
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\SQLSERVER_logo.png" alt="SQLSERVER">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\SWIFT_logo.png" alt="SWIFT">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\R_logo.png" alt="R">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle" />
+                    <img src="\logo\ANGULAR_logo.png" alt="ANGULAR">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\HTML5_logo.png" alt="some img">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\HTML5_logo.png" alt="some img">
+                </label>
+                <label class="types">
+                    <input type="radio" name="toggle">
+                    <img src="\logo\CSS3_logo.png" alt="some img">
+                </label>
+            </div>
+
+            <br />
+            <br />
+            <div class="field">
+                <div class="language">
+                    <br />
+                    <label ng-show="betterField2" class="localidade">
+                        <h1>Escolha a Localidade</h1>
+                    </label>
+                    <br />
+                    <select class="localidade" ng-model="betterField2" />
+                    <option value="0" disabled>Localidade</option>
+                    <option value="1">Lisboa</option>
+                    <option value="2">Porto</option>
+                    <option value="3">Braga</option>
+                    <option value="4">Bragança</option>
+                    <option value="5">Castelo Branco</option>
+                    <option value="6">Coimbra</option>
+                    <option value="7">Évora</option>
+                    <option value="8">Faro</option>
+                    <option value="9">Guarda</option>
+                    <option value="10">Leiria</option>
+                    <option value="11">Aveiro</option>
+                    <option value="12">Coimbra</option>
+                    <option value="13">Portalegre</option>
+                    <option value="14">Beja</option>
+                    <option value="15">Santarém</option>
+                    <option value="16">Setúbal</option>
+                    <option value="17">Viana do Castelo</option>
+                    <option value="18">Vila Real</option>
+                    <option value="19">Viseu</option>
+                    </select>
+                    <br />
+                    <br />
+                </div>
+
+            </div>
+            <br />
+
+            <div class="language">
+                <h1>Preco por hora</h1>
+                <br />
+
+                <input type="number" value="0.00" min="1" size="5" />
                 <br />
                 <br />
+
             </div>
 
         </div>
         <br />
 
+
+
         <div class="language">
-            <h1>Preco por hora</h1>
-            <br />
-
-            <input type="number" value="0.00" min="1" size="5" />
-            <br />
-            <br />
-
+            <div class="enviar">
+                <input class="reset" type="reset" value="Limpar pesquisa" />
+                <input class="submit" type="submit" value="Pesquisar" href="/OfferResults/OfferResults" />
+                @*<a href="/OfferResults/OfferResults"></a>*@
+            </div>
         </div>
-
-</div>
-<br />
-
-
-
-<div class="language">
-    <div class="enviar">
-        <input class="reset" type="reset" value="Limpar pesquisa" />
-        <input class="submit" type="submit" value="Pesquisar" href="/OfferResults/OfferResults" />
-        @*<a href="/OfferResults/OfferResults"></a>*@
-    </div>
-</div>
-</form>
+    </form>
     </div>

@@ -15,16 +15,14 @@
             <nav>
                 <div>
 
-                    @*@Html.ActionLink("CODE PLACE", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                    @Html.ActionLink("CODE PLACE", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                     @*<img id="logo" src="https://assets8.domestika.org/job-covers/000/047/358/47358-original.png?1487366086" alt="Site Logo" />*@
-                    <a href="@Url.Action("Index", "Home")"> <img id="logo" src="https://www.rockstart.com/wp-content/uploads/2014/09/Screen-Shot-2016-09-26-at-13.40.51.png" alt="Site Logo" /></a>
+
                     <ul>
 
                         @* <li>@Html.ActionLink("Home", "Index", "Home")</li>*@
-                        <li>@Html.ActionLink("ABOUT", "About", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
                         @*<li>@Html.ActionLink("Role", "Index", "Role")</li>*@
-                        <li>@Html.ActionLink("HOW IT WORKS", "HowItWorks", "Home")</li>
-                        <li>@Html.ActionLink("CONTACTS", "Contacts", "Home")</li>
                     </ul>
                     <form>
                         <div class="login">

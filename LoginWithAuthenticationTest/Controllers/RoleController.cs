@@ -5,7 +5,7 @@ using System.Web.Mvc;
 using LoginWithAuthenticationTest.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace LoginWithAuthenticationTest.Controllers
+namespace A11_RBS.Controllers
 {
     public class RoleController : Controller
     {
