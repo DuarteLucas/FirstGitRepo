@@ -342,13 +342,12 @@
 
     <Content Include="Views\Account\RegisterCompany.cshtml" />
     <Content Include="Views\Programadors\SelectLanguages.cshtml" />
-<<<<<<< HEAD
+
     <Content Include="Views\Home\HowItWorks.cshtml" />
     <Content Include="Views\Home\Contacts.cshtml" />
-=======
+
     <Content Include="Views\Search\ResultProgrammer.cshtml" />
 
->>>>>>> 8df5648018d36583d9f866efa89a49785971f65f
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
