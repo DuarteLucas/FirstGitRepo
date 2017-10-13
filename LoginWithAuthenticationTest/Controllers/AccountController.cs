@@ -89,7 +89,7 @@ namespace LoginWithAuthenticationTest.Controllers
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Tentativa de login inválida.");
+                    ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
             }
         }
@@ -132,7 +132,7 @@ namespace LoginWithAuthenticationTest.Controllers
                     return View("Lockout");
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Código inválido.");
+                    ModelState.AddModelError("", "Invalid code.");
                     return View(model);
             }
         }
@@ -192,6 +192,13 @@ namespace LoginWithAuthenticationTest.Controllers
             return View(model);
         }
 
+        //
+        // GET: /Account/Register  // Página com os dois botoes, onde o utilizador diz se é empresa ou programador
+        [AllowAnonymous]
+        public ActionResult Register()
+        {
+            return View();
+        }
         //
         // GET: /Account/RegisterCompany
         [AllowAnonymous]
@@ -466,7 +473,7 @@ namespace LoginWithAuthenticationTest.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
-            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);           
             return RedirectToAction("Index", "Home");
         }
 

@@ -1,14 +1,28 @@
-﻿@model IEnumerable<LoginWithAuthenticationTest.Models.Language>
+﻿@model List<LoginWithAuthenticationTest.Models.Language>
 
 
 @{
     ViewBag.Title = "SelectLanguages";
 }
+<div class="searchProgrammer">
+    <h1>Choose your languages</h1>
+ <form id="pesquisa">
+        <div class="language">
 
-@foreach (var item in Model)
-{
-    <label class="types">
-        <input type="radio">
-        <img src=@Html.DisplayFor(modelItem => item.Image) alt="PHP">
-    </label>
-}
+            @foreach (var item in Model)
+            {
+                <label class="types">
+                    <input type="radio">
+                    <img src="@item.Image" alt="@item.Name">
+                </label>
+            }
+
+        </div>
+        
+     <div class="send">
+         @*<input class="submit" type="submit" value="Pesquisar" />*@
+         @Html.ActionLink("Submit", "Index", "Home")
+     </div>
+
+    </form>
+</div>

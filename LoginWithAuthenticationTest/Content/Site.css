@@ -1,6 +1,7 @@
 ﻿/*@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
 @charset "UTF-8";
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);*/
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);*/
 
 
 .layout footer {
@@ -18,13 +19,14 @@
 }
 
 
+
 .homepage figure.snip0069 {
     font-family: 'Raleway', Arial, sans-serif;
     color: #fff;
     position: relative;
     float: left;
     overflow: hidden;
-    margin-left: 225px;
+    margin-left: 10px;
     min-width: 320px;
     max-width: 410px;
     width: 100%;
@@ -33,7 +35,7 @@
 }
 
     .homepage figure.snip0069 * {
-        -webkit-box-sizing: border-box;
+        /*-webkit-box-sizing: border-box;*/
         box-sizing: border-box;
         text-align: center;
     }
@@ -160,8 +162,9 @@
 
 .homepage h1, h2 {
     text-align: center;
-    margin: 0px 0px 80px 0px;
-    font-size: 21px;
+    margin: 0 0 80px 0;
+    font-size: 40px;
+    color:gray;
 }
 
 .homepage h2 {
@@ -280,7 +283,12 @@
     background-color: white;
     /*padding-left: 150px;
     padding-right: 150px;*/
+    text-align: center;
+    position: center;
+    align-content: center;
 }
+
+
 
     /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -578,7 +586,6 @@
     text-transform: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 .profileuser .social__icon, [class^="social__icon"] {
@@ -737,11 +744,368 @@
 }
 
 .textbox {
-    width:350px;
+    width:300px;
+}
+
+/*howItWorks*/
+
+
+.howItWorks img,
+.howItWorks iframe,
+.howItWorks video {
+    max-width: 100%;
+    width: 100%;
+    /*vertical-align: middle;*/
+    border: 0;
+    display: block;
+    margin: 0 auto;
+}
+
+.howItWorks ol,
+.howItWorks ul,
+.howItWorks dl {
+    margin: 0;
+    padding: 0;
+}
+
+.howItWorks li {
+    list-style-type: none;
+}
+
+/* ---- Link ---- */
+.howItWorks a {
+    text-decoration: none;
+}
+
+    .howItWorks a:active,
+    .howItWorks a:hover,
+    .howItWorks a:focus {
+        outline: 0;
+        text-decoration: none;
+    }
+
+    .howItWorks a:link {
+        -webkit-tap-highlight-color: #000;
+    }
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.howItWorks process__list,
+.howItWorks process__item,
+.howItWorks item__inner {
+    display: -webkit-box;
+    display: -moz-box;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.howItWorks {
+    max-width: 1270px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+    .howItWorks process__list {
+        width: 95%;
+    }
+
+    .howItWorks process {
+        background: #f0f0f0;
+        overflow: hidden;
+        padding: 20px;
+        width: 1500px;
+    }
+
+    .howItWorks process__title {
+        text-transform: uppercase;
+        color: #049bf7;
+        font-family: "Roboto", sans-serif;
+    }
+
+.howItWorks process__title span {
+    color: #333;
+}
+
+    .howItWorks process__item_blue {
+        background: #72d4df;
+    }
+
+    .howItWorks process__item_yellow {
+        background: #ffcd64;
+    }
+
+    .howItWorks process__item_orange {
+        background: #fd912c;
+    }
+
+    .howItWorks process__item_pink {
+        background: #e34856;
+    }
+
+    .howItWorks process__item_green {
+        background: #b5de39;
+    }
+
+    .howItWorks item__content {
+        font-size: 10px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .howItWorks process__item svg {
+        fill: #fff;
+    }
+
+    .howItWorks step {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        font-size: 50px;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        margin-top: -30px;
+        right: -30px;
+        z-index: 15;
+    }
+
+    .howItWorks item__icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        position: absolute;
+        top: 50%;
+        z-index: 15;
+        left: 55px;
+        margin-top: -10px;
+    }
+
+    .howItWorks process__item {
+        cursor: pointer;
+        color: #fff;
+        width: 19.8%;
+        font-family: "Roboto", sans-serif;
+        -webkit-transition: all 0.52s ease-in-out;
+        -o-transition: all 0.52s ease-in-out;
+        transition: all 0.52s ease-in-out;
+    }
+
+    .howItWorks item__inner {
+        position: relative;
+        padding: 5px 35px 5px 90px;
+        height: 120px;
+    }
+
+        .howItWorks item__inner:after {
+            content: "";
+            display: block;
+            border-top: 60px solid transparent;
+            border-bottom: 60px solid transparent;
+            border-left: 50px solid #72d4df;
+            position: absolute;
+            right: -49.5px;
+            z-index: 13;
+            top: 0;
+        }
+
+    .howItWorks process__item_blue .item__inner:after {
+        border-left: 50px solid #72d4df;
+    }
+
+    .howItWorks process__item_yellow .item__inner:after {
+        border-left: 50px solid #ffcd64;
+    }
+
+    .howItWorks process__item_orange .item__inner:after {
+        border-left: 50px solid #fd912c;
+    }
+
+    .howItWorks process__item_pink .item__inner:after {
+        border-left: 50px solid #e34856;
+    }
+
+    .howItWorks process__item_green .item__inner:after {
+        border-left: 50px solid #b5de39;
+    }
+
+    .howItWorks item__inner:before {
+        content: "";
+        display: block;
+        border-top: 60px solid transparent;
+        border-bottom: 60px solid transparent;
+        border-left: 50px solid #f0f0f0;
+        position: absolute;
+        left: -1px;
+        z-index: 10;
+        top: 0;
+    }
+
+.Contactos {
+    position: center;
+    align-content: center;
+    text-align: center;
+
+}
+
+        .Contactos h4 {
+            margin-left: 50px;
+        }
+/*how it works css*/
+
+
+
+
+.howitworks h2 {
+    font-size: 45px;
+    color: dimgrey;
+}
+
+.howitworks .steps-name {
+    font-size: 22px;
+    color: black;
+}
+
+.howitworks html {
+    box-sizing: border-box;
 }
 
 
 
+.howitworks body {
+    font-family: lato;
+}
 
+.howitworks .section-header, .steps-header, .steps-name {
+    color: #3498DB;
+    font-weight: 400;
+    font-size: 1.4em;
+}
 
+.howitworks .steps-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
 
+.howitworks .steps-timeline {
+    outline: 1px dashed rgba(255, 0, 0, 0);
+}
+
+@media screen and (max-width: 500px) {
+    .howitworks .steps-timeline {
+        border-left: 2px solid #3498DB;
+        margin-left: 25px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .howitworks .steps-timeline {
+        border-top: 2px solid #3498DB;
+        padding-top: 20px;
+        margin-top: 40px;
+        margin-left: 16.65%;
+        margin-right: 16.65%;
+    }
+}
+
+.howitworks .steps-timeline:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.howitworks .steps-one,
+.steps-two,
+.steps-three {
+    outline: 1px dashed rgba(0, 128, 0, 0);
+}
+
+@media screen and (max-width: 500px) {
+    .howitworks .steps-one,
+    .steps-two,
+    .steps-three {
+        margin-left: -25px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .howitworks .steps-one,
+    .steps-two,
+    .steps-three {
+        float: left;
+        width: 33%;
+        margin-top: -50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .howitworks .steps-one,
+    .steps-two {
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .howitworks .steps-one {
+        margin-left: -16.65%;
+        margin-right: 16.65%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .howitworks .steps-three {
+        margin-bottom: -100%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .howitworks .steps-three {
+        margin-left: 16.65%;
+        margin-right: -16.65%;
+    }
+}
+
+.howitworks .steps-img {
+    display: block;
+    margin: auto;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 500px) {
+    .howitworks .steps-img {
+        float: left;
+        margin-right: 20px;
+    }
+}
+
+.howitworks .steps-name,
+.steps-description {
+    margin: 0;
+}
+
+@media screen and (min-width: 500px) {
+    .howitworks .steps-name {
+        text-align: center;
+    }
+}
+
+.howitworks .steps-description {
+    overflow: hidden;
+}
+
+@media screen and (min-width: 500px) {
+    .howitworks .steps-description {
+        text-align: center;
+    }
+}
