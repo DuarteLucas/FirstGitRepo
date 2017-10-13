@@ -344,6 +344,8 @@
     <Content Include="Views\Home\HowItWorks.cshtml" />
     <Content Include="Views\Home\Contacts.cshtml" />
     <Content Include="Views\Search\ResultProgrammer.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -391,8 +393,8 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <PropertyGroup>
-    <PreBuildEvent>tasklist /fi "imagename eq iisexpress.exe" |find ":" &gt; nul
-if errorlevel 1 taskkill /f /im "iisexpress.exe"</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

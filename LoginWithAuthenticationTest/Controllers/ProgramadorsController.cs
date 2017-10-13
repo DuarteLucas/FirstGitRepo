@@ -43,7 +43,8 @@ namespace LoginWithAuthenticationTest.Controllers
 
         public ActionResult SelectLanguages()
         {
-            return View();
+            
+            return View(db.Language.ToList());
         }
 
         // POST: Programadors/Create
@@ -91,7 +92,7 @@ namespace LoginWithAuthenticationTest.Controllers
                 db.SaveChanges();
                 return RedirectToAction("SelectLanguages");
             }
-            return View(programador);
+            return View("SelectLanguages");
         }
 
         // GET: Programadors/Delete/5
