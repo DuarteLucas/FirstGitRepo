@@ -44,18 +44,18 @@
         <th>
             @Html.DisplayNameFor(model => model.PriceHour)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Foto)
-        </th>
         @*<th>
-            @Html.DisplayNameFor(model => model.LinkGithub)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LinkLinkedin)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Certificates)
-        </th>*@
+        @Html.DisplayNameFor(model => model.Foto)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.LinkGithub)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.LinkLinkedin)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.Certificates)
+    </th>*@
         @*<th>
             @Html.DisplayNameFor(model => model.Privacy)
         </th>*@
@@ -97,23 +97,23 @@
         <td>
             @Html.DisplayFor(modelItem => item.PriceHour)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Foto)
-        </td>
         @*<td>
-            @Html.DisplayFor(modelItem => item.LinkGithub)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LinkLinkedin)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Certificates)
-        </td>*@
+        @Html.DisplayFor(modelItem => item.Foto)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LinkGithub)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LinkLinkedin)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Certificates)
+    </td>*@
         @*<td>
             @Html.DisplayFor(modelItem => item.Privacy)
         </td>*@
         <td>
-            @Html.ActionLink("Profile","Details","Programadors", new { id=item.ProgramadorID}, null)
+            @Html.ActionLink("View Profile","Details","Programadors", new { id=item.ProgramadorID}, null)
             @*@Html.ActionLink("Edit", "Edit", new { id=item.ProgramadorID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ProgramadorID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ProgramadorID })*@

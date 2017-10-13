@@ -7,7 +7,7 @@
 
 
         <div class="language">
-            <h1>Escolha a linguagem pretendida</h1>
+            <h1>Select Language</h1>
             
             <label class="types">
                  @*@Html.RadioButton("SelectedLanguage", "Php", true)*@ 
@@ -71,7 +71,7 @@
             <div class="language">
                 <br />
                 <label ng-show="betterField2" class="localidade"> </label>
-                    <h1>Escolha a Localidade</h1>
+                    <h1>Select Location</h1>
                 
                 <br />
                 <select class="localidade" ng-model="betterField2" name="SelectedLocation">
@@ -102,7 +102,7 @@
         <br />
 
         @* Barra de Experiencia *@
-        <div class="language">
+        @*<div class="language">
             <h1>Anos de Experiencia</h1>
 
             <div class="range-container" id="range-c1">
@@ -111,14 +111,14 @@
                        onInput="rangeHelper(this, document.getElementById('range-c1'), document.getElementById('range-b1'));">
                 <div id="range-b1"></div>
             </div>
-        </div>
+        </div>*@
         <br />
         <br />
         @* Bloco de envio *@
         <div class="language">
             <div class="send">
-                <input class="reset" type="reset" value="Limpar pesquisa" />
-                <input class="submit" type="submit" value="Pesquisar" />
+                <input class="reset" type="reset" value="Clear Selection" />
+                <input class="submit" type="submit" value="Search" />
             </div>
         </div>
      }

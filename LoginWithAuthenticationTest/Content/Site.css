@@ -9,6 +9,9 @@
     background-color: #F8F8F8;
     border-top: 1px solid #E7E7E7;
     text-align: center;
+    align-content: center;
+    align-self: center;
+    align-items: center;
     padding: 20px;
     /* just for demo */
     position: absolute;
@@ -713,7 +716,7 @@
 
         .profileuser .profile-data ul li strong {
             display: inline-block;
-            width: 90px;
+            /*width: 90px;*/
         }
 
 .profileuser .user-files li {

@@ -156,7 +156,7 @@ namespace LoginWithAuthenticationTest.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 jobEntities1 db = new jobEntities1();
                 Programador userProgramador = new Programador

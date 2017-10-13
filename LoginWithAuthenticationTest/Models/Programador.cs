@@ -11,7 +11,8 @@ namespace LoginWithAuthenticationTest.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Programador
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,18 +23,25 @@ namespace LoginWithAuthenticationTest.Models
     
         public string ProgramadorGUID { get; set; }
         public int ProgramadorID { get; set; }
+        [Display (Name="First name")]
         public string FirstName { get; set; }
+        [Display(Name = "Last name")]
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public Nullable<int> Age { get; set; }
+        [Display(Name = "Phone number")]
         public string PhoneNumber { get; set; }
         public string Location { get; set; }
         public string Category { get; set; }
         public string Description { get; set; }
+        [Display(Name = "Price per hour")]
         public Nullable<decimal> PriceHour { get; set; }
+        [Display(Name = "Profile picture")]
         public string Foto { get; set; }
+        [Display(Name = "Link for GitHub")]
         public string LinkGithub { get; set; }
+        [Display(Name = "Link for Linkedin")]
         public string LinkLinkedin { get; set; }
         public string Certificates { get; set; }
         public bool Privacy { get; set; }
