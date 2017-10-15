@@ -6,9 +6,9 @@
 
 <h2>Search Results</h2>
 
-<p>
-    @Html.ActionLink("Go back to Search", "SearchProgrammerForm", "SearchProgrammer")
-</p>
+<h4>
+    @Html.ActionLink("Back to Search", "SearchProgrammerForm", "SearchProgrammer")
+</h4>
 <table id="ResultProgrammer"class="table">
     <tr>
         @*<th>
@@ -112,12 +112,10 @@
         @*<td>
             @Html.DisplayFor(modelItem => item.Privacy)
         </td>*@
-        <td>
+        <th>
             @Html.ActionLink("View Profile","Details","Programadors", new { id=item.ProgramadorID}, null)
-            @*@Html.ActionLink("Edit", "Edit", new { id=item.ProgramadorID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ProgramadorID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ProgramadorID })*@
-        </td>
+           
+        </th>
     </tr>
 }
 

@@ -473,8 +473,24 @@ namespace LoginWithAuthenticationTest.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
-            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);           
-            return RedirectToAction("Index", "Home");
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie, DefaultAuthenticationTypes.ExternalCookie);
+            if (HttpContext.Request.Cookies[".AspNet.ApplicationCookie"] != null)
+            {
+                var c = new HttpCookie(".AspNet.ApplicationCookie");
+                c.Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies.Add(c);
+            }
+
+            if (HttpContext.Request.Cookies["__RequestVerificationToken"] != null)
+            {
+                var c = new HttpCookie("__RequestVerificationToken");
+                c.Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies.Add(c);
+            }
+
+            Session.Abandon();
+
+            return RedirectToAction("Index", "Homepage");
         }
 
         //
