@@ -345,10 +345,11 @@
     <Content Include="Views\Home\Contacts.cshtml" />
     <Content Include="Views\Search\ResultProgrammer.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
-
+    <Content Include="Views\Search\ResultCompany.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Pictures\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

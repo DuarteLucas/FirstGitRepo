@@ -6,10 +6,23 @@
 
 <h2>Your profile</h2>
 
+@*<ol class="progress">
+    <li data-step="1">
+        Step 1
+    </li>
+    <li class="is-active" data-step="2">
+        Step 2
+    </li>
+    <li data-step="3" class="progress__last">
+        Step 3
+    </li>
+</ol>*@
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
+
+
 
     <div class="form-horizontal">
         @*<h4>Programador</h4>*@
@@ -93,7 +106,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+                <div class="form-group">
             @Html.LabelFor(model => model.Foto, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Foto, new { htmlAttributes = new { @class = "form-control textbox" } })

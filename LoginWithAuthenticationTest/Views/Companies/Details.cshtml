@@ -4,87 +4,55 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="profileuser">
+    <h2>Company Details</h2>
+    <div class="container-fluid">
+        <div class="col-sm-12">
+            <div class="panel panel-default user-info">
+                <div class="panel-body clearfix">
+                    <div class="pull-left profile-avatar">
+                        <div class="thumbnail">
+                            <img src="@Html.DisplayFor(model => model.Image)">
+                        </div>
+                    </div>
+                    <div class="pull-left profile-data">
+                        <div class="name">
+                            <h3><strong>@Html.DisplayFor(model => model.Name)</strong></h3>
+                        </div>
+                        <div class="contact-data">
+                            <ul class="list-unstyled">
+                                <li><strong>@Html.DisplayNameFor(model => model.PhoneNumber):   </strong>   @Html.DisplayFor(model => model.PhoneNumber)</li>
+                                <li><strong>@Html.DisplayNameFor(model => model.Location):      </strong>   @Html.DisplayFor(model => model.Location) </li>
+                                <li><strong>@Html.DisplayNameFor(model => model.Link):      </strong><a href="@Html.DisplayFor(model => model.Location)">@Html.DisplayFor(model => model.Link)</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="button">SAVE</button>
+                    <a href="mailto:@Model.Email?Subject=CodePlace%20first%20contact" target="_top"><button class="button button2">CONTACT COMPANY</button></a>
+                </div>
+            </div>
 
-<div>
-    <h4>Company</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        @*<dt>
-            @Html.DisplayNameFor(model => model.CompanyGUID)
-        </dt>
+            @if (Model.CoreBusiness != null)
+            {
+                <div class="panel panel-default user-notes">
 
-        <dd>
-            @Html.DisplayFor(model => model.CompanyGUID)
-        </dd>*@
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        @*<dt>
-            @Html.DisplayNameFor(model => model.Password)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Password)
-        </dd>*@
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Location)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CoreBusiness)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CoreBusiness)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Image)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Link)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Link)
-        </dd>
-
-    </dl>
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            @Html.DisplayNameFor(model => model.CoreBusiness)
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li>@Html.DisplayFor(model => model.CoreBusiness)</li>
+                        </ul>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CompanyID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+                        @*<p>
+                            @Html.ActionLink("Edit", "Edit", new { id = Model.CompanyID }) |
+                            @Html.ActionLink("Back to List", "Index")
+                        </p>*@

@@ -52,5 +52,15 @@ namespace LoginWithAuthenticationTest.Controllers
 
             return View(result.ToList());
         }
+        [HttpPost]
+        public ActionResult ResultCompany(string SelectedLanguage, string SelectedLocation)
+        {
+            jobEntities1 db = new jobEntities1();
+
+            var result = db.CompanyOffer.Where(c => c.Language.CompanyOffer.Any(l => l.Language.Name == SelectedLanguage) && c.Location.Contains(SelectedLocation));
+
+            return View(result.ToList());
+        }
     }
+
 }

@@ -5,9 +5,9 @@
 
     <h2>@ViewBag.Title</h2>
 
-
 @using (Html.BeginForm("RegisterProgrammer", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
+
     @Html.AntiForgeryToken()
     <h4>Create a new <strong>Developer</strong> account.</h4>
     <hr />

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<LoginWithAuthenticationTest.Models.CompanyOffer>
+
+@{
+    ViewBag.Title = "List of Results";
+}
+
+<h2>ResultCompany</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Company.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Language.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Company.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Language.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.CompanyOfferID }) |*@
+            @*@Html.ActionLink("Details", "Details", new { id=item.CompanyOfferID }) |*@
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.CompanyOfferID })*@
+            <a href="mailto:@item.Company.Email?Subject=Codeplace%20job%20application" target="_top">Apply</a>
+
+        </td>
+    </tr>
+}
+
+</table>
