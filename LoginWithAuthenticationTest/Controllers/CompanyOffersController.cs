@@ -7,12 +7,14 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using LoginWithAuthenticationTest.Models;
+using Microsoft.AspNet.Identity;
 
 namespace LoginWithAuthenticationTest.Controllers
 {
     public class CompanyOffersController : Controller
     {
         private jobEntities1 db = new jobEntities1();
+        private ApplicationUserManager _userManager;
 
         // GET: CompanyOffers
         public ActionResult Index()
@@ -51,11 +53,18 @@ namespace LoginWithAuthenticationTest.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CompanyOfferID,CompanyID,LanguageID,Price,Location,Experience,Description")] CompanyOffer companyOffer)
         {
+            var userId = User.Identity.GetUserId();
+            var company = db.Company.FirstOrDefault(p => p.CompanyGUID == userId);
+            if(company == null)
+            {
+                return HttpNotFound();
+            }
+            companyOffer.CompanyID = company.CompanyID;
             if (ModelState.IsValid)
             {
                 db.CompanyOffer.Add(companyOffer);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Home");
             }
 
             ViewBag.CompanyID = new SelectList(db.Company, "CompanyID", "CompanyGUID", companyOffer.CompanyID);

@@ -111,11 +111,11 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Foto, new { htmlAttributes = new { @class = "form-control textbox" } })
                 @Html.ValidationMessageFor(model => model.Foto, "", new { @class = "text-danger" })
-                <label class="input-group-btn">
+                @*<label class="input-group-btn">
                     <span class="btn btn-default">
                         Browse&hellip; <input type="file" style="display: none;" multiple>
                     </span>
-                </label>
+                </label>*@
             </div>
         </div>
 

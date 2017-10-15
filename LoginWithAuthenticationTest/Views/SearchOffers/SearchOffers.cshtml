@@ -4,11 +4,8 @@
 <div class="searchProgrammer">
     @using (Html.BeginForm("ResultCompany", "Search", FormMethod.Post))
     {
-
-
-
         <div class="language">
-            <h1>Título</h1>
+            <h1>Select your skills</h1>
 
             <label class="types">
                 @*@Html.RadioButton("SelectedLanguage", "Php", true)*@
@@ -118,8 +115,10 @@
         @* Bloco de envio *@
         <div class="language">
             <div class="send">
-                <input class="reset" type="reset" value="Limpar pesquisa" />
-                <input class="submit" type="submit" value="Pesquisar" />
+                <input id="button1" type="reset" value="Clear Selection" />
+                <input id="button2" type="submit" value="Search" />
+               @Html.ActionLink("See All","Index", "CompanyOffers", null, new { id = "button3" })
+               
             </div>
         </div>
     }

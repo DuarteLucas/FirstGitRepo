@@ -325,9 +325,9 @@
     /* Pesquisa por porgramador- Ofertas de trabalho*/
 
     .searchProgrammer .language {
-        border: 5px solid grey;
+        /*border: 5px solid grey;*/
         text-align: center;
-        background-color: floralwhite
+        /*background-color: floralwhite*/
     }
 
     .searchProgrammer .types {
@@ -335,7 +335,7 @@
     }
 
     .searchProgrammer .field {
-        border: 5px solid grey;
+        /*border: 5px solid grey;*/
         text-align: center;
     }
 
@@ -362,10 +362,43 @@
         font-family: Verdana;
         color: black;
     }
-    .table {
+    .searchProgrammer table {
         margin-left: 30px;
     }
-        
+
+
+    .searchProgrammer #button3 /* SEE ALL */ {
+        background-color: #ff6347; /* VERDE */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    .searchProgrammer #button2 /* SEARCH */ {
+        background-color: #008B8B; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    .searchProgrammer #button1 /* CLEAR */ {
+        background-color: #778899; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
 
 
 

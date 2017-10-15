@@ -11,8 +11,7 @@ namespace LoginWithAuthenticationTest.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Language
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,7 +22,6 @@ namespace LoginWithAuthenticationTest.Models
         }
     
         public int LanguageID { get; set; }
-        [Display(Name="Skill")]
         public string Name { get; set; }
         public string Image { get; set; }
     

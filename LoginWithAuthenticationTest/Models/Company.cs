@@ -11,8 +11,7 @@ namespace LoginWithAuthenticationTest.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Company
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,7 +22,6 @@ namespace LoginWithAuthenticationTest.Models
     
         public string CompanyGUID { get; set; }
         public int CompanyID { get; set; }
-        [Display (Name="Company")]
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }

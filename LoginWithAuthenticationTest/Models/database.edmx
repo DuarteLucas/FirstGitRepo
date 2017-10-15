@@ -64,7 +64,7 @@
           <Property Name="Category" Type="varchar" MaxLength="50" />
           <Property Name="Description" Type="varchar" MaxLength="50" />
           <Property Name="PriceHour" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="Foto" Type="varchar" MaxLength="50" />
+          <Property Name="Foto" Type="varchar" MaxLength="255" />
           <Property Name="LinkGithub" Type="varchar(max)" />
           <Property Name="LinkLinkedin" Type="varchar(max)" />
           <Property Name="Certificates" Type="varchar(max)" />
@@ -212,7 +212,7 @@
           <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="PriceHour" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="Foto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Foto" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="LinkGithub" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="LinkLinkedin" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Certificates" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
