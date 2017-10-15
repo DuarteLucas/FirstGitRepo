@@ -11,7 +11,8 @@ namespace LoginWithAuthenticationTest.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class CompanyOffer
     {
         public int CompanyOfferID { get; set; }
